@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    margin: 0.3em 0;
+}
+
+
+/* logo section */
+.logo-wrapper {
+    height: 60vh;
+    background: red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 50%;
+
+    position: relative;
+}
+
+.logo-inner {   
+    position: absolute;
+    left: 35px;
+    top: 35px;
+    right: 35px;
+    bottom: 35px;
+    
+    background: red;
+    border-radius: 50%;
+}
+
+.logo-inner::before {
+    content: "";
+    width: 0;
+    height: 0;
+    transform: rotate(73deg) skewX(30deg);
+    transform-origin: 0 50%;
+
+    border: 30px solid transparent;
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 21px;
+    border-left: 30px solid red;
+    border-bottom: 30px solid red;
+
+    position: absolute;
+    top: -36px;
+    left: 19px;
+}
+
+
+/* user information form */
+
+form {
+    min-height: 50vh;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 450;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form > header {
+    color: red;
+    text-align: center;
+    margin: 2em 0;
+}
+
+form header h3 {
+    font-size: 3.3rem;
+}
+
+form header span {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+
+#form-body {
+    padding: 0 5em;
+}
+
+.form-group {
+    margin: 1em 0;
+}
+
+.form-group  input {
+    display: block;
+    width: 100%;
+    padding: 5px 15px;
+    letter-spacing: 1px;
+}
+
+#form-body button {
+    width: 100%;
+    padding: 1em;
+    margin: 2em 0 5em;
+    border: none;
+    background: red;
+
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.94rem;
+
+    transition: all 0.26s;
+}
+
+#form-body button:hover {
+    background: rgb(231, 1, 1);
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 577px) {
+    #form-body {
+        padding: 0 20%;
+    }
+
+    .logo-wrapper {
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    #form-body {
+        padding: 0 35%;
+    }
+}
